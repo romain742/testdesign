@@ -1,0 +1,9 @@
+body {
+  background-color: lime;
+}
+
+@media screen and (min-device-width: 1200px) {
+  body {
+    background-color: red;
+  }
+}

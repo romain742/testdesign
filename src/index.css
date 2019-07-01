@@ -1,0 +1,11 @@
+@import "importme.css";
+
+body {
+  background-color: tomato;
+}
+
+@media screen and (min-device-width: 1200px) {
+  body {
+    background-color: lime;
+  }
+}
