@@ -4,8 +4,12 @@ body {
   background-color: tomato;
 }
 
-@media screen and (min-device-width: 1200px) {
-  body {
-    background-color: lime;
-  }
+.my3 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.my2 {
+  margin-top: 2rem;
+  margin-top: 2rem;
 }
