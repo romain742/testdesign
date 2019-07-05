@@ -1,3 +1,3 @@
-const foo = () => console.info("DOMContentLoaded event");
+const init = () => console.info("DOMContentLoaded event");
 
-window.addEventListener("DOMContentLoaded", foo);
+window.addEventListener("DOMContentLoaded", init);

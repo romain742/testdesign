@@ -19,7 +19,9 @@
     "build:js": "rollup -c rollup.config.js",
     "build:html": "htmlmin dist/build.html -o dist/index.html",
     "prebuild:html": "inline-source --compress false src/index.html > dist/build.html",
-    "build": "npm-run-all build:*"
+    "prebuild": "rm -rf dist",
+    "build": "npm-run-all build:*",
+    "postbuild": "rm dist/build.html dist/bundle.css dist/bundle.js"
   },
   "dependencies": {
     "@babel/preset-env": "^7.4.5",
