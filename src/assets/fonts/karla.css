@@ -1,0 +1,21 @@
+:root {
+  --sans: Karla, serif;
+}
+
+@font-face {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Karla"), local("Karla-Regular"),
+    url("/karla-v6-latin-regular.woff2") format("woff2"),
+    url("/karla-v6-latin-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Karla Bold"), local("Karla-Bold"),
+    url("/karla-v6-latin-700.woff2") format("woff2"),
+    url("/karla-v6-latin-700.woff") format("woff");
+}

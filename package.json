@@ -14,22 +14,42 @@
     "node": ">=6.9"
   },
   "main": "index.js",
+  "watch": {
+    "build": {
+      "patterns": "src",
+      "extensions": [
+        "css",
+        "js",
+        "html"
+      ]
+    }
+  },
   "scripts": {
-    "build:css": "postcss src/index.css -o dist/bundle.css",
+    "build:fonts": "mkdir public && cp src/assets/fonts/*.wof* public/",
+    "build:css": "postcss src/index.css -o public/bundle.css",
     "build:js": "rollup -c rollup.config.js",
-    "build:html": "htmlmin dist/build.html -o dist/index.html",
-    "prebuild:html": "inline-source --compress false src/index.html > dist/build.html",
-    "prebuild": "rm -rf dist",
+    "build:html": "htmlmin public/build.html -o public/index.html",
+    "prebuild:html": "inline-source --compress false src/index.html > public/build.html",
+    "prebuild": "rm -rf public",
     "build": "npm-run-all build:*",
-    "postbuild": "rm dist/build.html dist/bundle.css dist/bundle.js"
+    "postbuild": "rm public/build.html public/bundle.css public/bundle.js",
+    "now-dev": "npm run build",
+    "watch": "npm-watch",
+    "serve": "serve public",
+    "start": "run-p watch serve"
   },
   "dependencies": {
     "@babel/preset-env": "^7.4.5",
     "@fullhuman/postcss-purgecss": "^1.2.0",
+    "basscss": "^8.1.0",
+    "basscss-responsive-layout": "^1.0.1",
+    "basscss-responsive-margin": "^1.1.0",
+    "basscss-responsive-padding": "^1.1.0",
     "html-minifier-cli": "^0.1.0",
     "inline-source-cli": "^1.2.0",
     "mqpacker": "^7.0.0",
     "npm-run-all": "^4.1.5",
+    "npm-watch": "^0.6.0",
     "postcss-cli": "^6.1.2",
     "postcss-csso": "^3.0.0",
     "postcss-custom-media": "^7.0.8",
@@ -40,6 +60,7 @@
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-babel-minify": "^9.0.0",
     "rollup-plugin-commonjs": "^10.0.1",
-    "rollup-plugin-node-resolve": "^5.2.0"
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "sort-css-media-queries": "^1.4.3"
   }
 }

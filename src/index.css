@@ -1,15 +1,11 @@
-@import "importme.css";
+@import "assets/fonts/display.css";
+@import "assets/fonts/karla.css";
+@import "basscss";
+@import "basscss-responsive-margin";
+@import "basscss-responsive-padding";
+@import "basscss-responsive-layout";
 
 body {
-  background-color: tomato;
-}
-
-.my3 {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
-.my2 {
-  margin-top: 2rem;
-  margin-top: 2rem;
+  font-family: var(--sans);
+  font-size: 20px;
 }
