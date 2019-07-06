@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'display';
+    src: local('SF Pro Display Black'),
+          url('sf-pro-display-black.woff2') format('woff2'),
+         url('sf-pro-display-black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+.display {
+  font-family: display, system-ui;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.78em;
+  font-size: 27vw;
+}
