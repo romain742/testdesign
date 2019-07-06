@@ -1,3 +1,4 @@
+console.log(require("path").join(__dirname, "public"));
 module.exports = {
   map: {
     inline: false
@@ -9,6 +10,6 @@ module.exports = {
     }),
     require("@fullhuman/postcss-purgecss")({ content: ["src/*.html"] }),
     require("postcss-csso"),
-    require("mqpacker")({ sort: true })
+    require("mqpacker")({ sort: require("sort-css-media-queries") })
   ]
 };

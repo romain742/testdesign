@@ -8,7 +8,7 @@ module.exports = {
   plugins: [resolve(), commonjs(), babel(), minify()],
   output: {
     sourcemap: true,
-    file: "dist/bundle.js",
+    file: "public/bundle.js",
     format: "cjs"
   }
 };

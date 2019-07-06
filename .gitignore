@@ -5,8 +5,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Ignore dist folder
-dist
+# Ignore public folder
+public
 
 # Runtime data
 pids
